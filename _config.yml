@@ -1,9 +1,9 @@
-title: John Smith
-description: My Personal Blog
-author: John Smith
-logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
-about: Freelance developer
+title: Eleveny Chen
+description: My personal repository
+author: Eleveny (Shiyi) Chen
+logo: https://avatars.githubusercontent.com/u/97559209?s=400&u=fcba20bdad6e942b7fe282f50b2d3a2479e9793b&v=4
+github: https://github.com/ElevenyChen
+about: Undergrad student at University of Michigan
 
 baseurl: ""
 url: ""
