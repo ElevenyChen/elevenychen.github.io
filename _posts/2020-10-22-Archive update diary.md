@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Archive update diary"
-date:   2022-10-22 19:23:39
+title:  "Archive Update Diary"
+date:   2022-10-25
 categories: others
 ---
 <h1>Archive update diary</h1>
