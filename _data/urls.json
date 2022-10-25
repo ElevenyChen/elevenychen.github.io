@@ -21,6 +21,11 @@
     "icon": "fa-graduation-cap",
   },
   {
+    "text": "Database",
+    "url": "/Database",
+    "icon": "fa-github"
+  },
+  {
     "text": "Github",
     "url": "https://github.com/ElevenyChen",
     "icon": "fa-github"
