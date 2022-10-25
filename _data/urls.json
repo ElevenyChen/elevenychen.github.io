@@ -24,6 +24,7 @@
     "text": "Database",
     "url": "/Database",
     "icon": "fa-feed"
+    "layout": "post"
   },
   {
     "text": "Github",
