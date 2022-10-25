@@ -10,7 +10,9 @@ categories: others
 
 <p>2022-10-22 Initial commit</p>
 
-<p>2022-10-23 Uploaded resume</p>
+<p>2022-10-23 Uploaded my resume</p>
+
+<p>2022-10-25 Uploaded the reference list</p>
 
 
 
