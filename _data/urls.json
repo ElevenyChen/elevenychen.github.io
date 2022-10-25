@@ -1,6 +1,6 @@
 [
   {
-    "text": "Home",
+    "text": "Data&Code",
     "url": "/",
     "icon": "fa-home",
     "layout": "post"
@@ -19,12 +19,6 @@
     "text": "Resume",
     "url": "https://github.com/ElevenyChen/elevenychen.github.io/raw/master/static/Eleveny_Chen_CV.pdf",
     "icon": "fa-graduation-cap",
-  },
-  {
-    "text": "Database",
-    "url": "/Database",
-    "icon": "fa-feed"
-    "layout": "post"
   },
   {
     "text": "Github",
