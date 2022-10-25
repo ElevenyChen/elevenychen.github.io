@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A List of Code and Data"
+title:  "A List for Code and Data"
 date:   2022-10-25
 categories: others
 ---
