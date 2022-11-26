@@ -7,8 +7,7 @@ categories: algorithms
 <p><small>Because of code confidentiality, this page only demonstrates the framework</small></p>
 
 PPM File Adjustment Algorithms</h1>
-The primary image resizing algorithm is based on a seam-carving algorithm. The task of the algorithm set is to apply seam carving for content-aware resizing of images. The core algorithm works by finding and removing “seams” in the image that pass through the least important pixels. For a quick introduction, check out [this video][this-video].
-[this-video]:  https://www.youtube.com/watch?v=6NcIJXTlugc
+The primary image resizing algorithm is based on a seam-carving algorithm. The task of the algorithm set is to apply seam carving for content-aware resizing of images. The core algorithm works by finding and removing “seams” in the image that pass through the least important pixels. For a quick introduction, check out [this video][video-link].
 
 <h2>Table of Content</h2>
 1. Fundations of objects
@@ -35,3 +34,4 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 [jekyll]:      http://jekyllrb.com
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-help]: https://github.com/jekyll/jekyll-help
+[video-link]:  https://www.youtube.com/watch?v=6NcIJXTlugc
