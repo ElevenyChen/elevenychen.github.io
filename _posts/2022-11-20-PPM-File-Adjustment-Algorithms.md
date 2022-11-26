@@ -11,7 +11,7 @@ The primary image resizing algorithm is based on a seam-carving algorithm. The t
 <br>
 <br>
 For example:
-![cv-demo](elevenychen.github.io/static/projects/pv-demo.png)
+![cv-demo](/static/projects/pv-demo.png)
 <br>
 <h2>Table of Content</h2>
 1. Fundations of objects
