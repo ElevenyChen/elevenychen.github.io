@@ -7,8 +7,9 @@ categories: algorithms
 <p><small>Because of code confidentiality, this page only demonstrates the framework</small></p>
 
 PPM File Adjustment Algorithms</h1>
-The primary image resizing algorithm is based on a seam-carving algorithm. The task of the algorithm set is to apply seam carving for content-aware resizing of images. The core algorithm works by finding and removing “seams” in the image that pass through the least important pixels. For a quick introduction, check out [this video][this video].
-[this video]:  https://www.youtube.com/watch?v=6NcIJXTlugc
+The primary image resizing algorithm is based on a seam-carving algorithm. The task of the algorithm set is to apply seam carving for content-aware resizing of images. The core algorithm works by finding and removing “seams” in the image that pass through the least important pixels. For a quick introduction, check out [this video][this-video].
+[this-video]:  https://www.youtube.com/watch?v=6NcIJXTlugc
+
 <h2>Table of Content</h2>
 1. Fundations of objects
 2. Basic functions
