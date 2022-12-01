@@ -3,20 +3,22 @@
 		"name": "PPM File Adjustment Algorithms",
 		"image": "pv-fundation.png",
 		"url": "https://elevenychen.github.io/algorithms/2022/11/20/PPM-File-Adjustment-Algorithms.html",
-		"date": "July 2020",
+		"date": "July 2022",
 		"tags": ["Machine Learning","C/C++","Graph"]
 	},
 	{
 		"name": "Machine Learning: A Forum Post Sorting Algorithm",
 		"image": "piazza.jpg",
 		"url": "https://elevenychen.github.io/algorithms/2022/11/21/forum-post-sorting.html",
-		"date": "July 2020",
+		"date": "July 2022",
 		"tags": ["Machine Learning","C/C++"]
 	},
 	{
-		"name": "Cool project 4",
-		"date": "Oct 2016",
-		"tags": ["Android","nodejs"]
+		"name": "Database Query Language (SimpleQL)",
+		"image": "placeholder.jpg",
+		"url": "https://elevenychen.github.io/algorithms/2022/11/21/database-query-language.html",
+		"date": "November 2022",
+		"tags": ["Database","C/C++"]
 	}
 
 ]
