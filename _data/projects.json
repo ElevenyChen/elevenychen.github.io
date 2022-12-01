@@ -7,11 +7,11 @@
 		"tags": ["Machine Learning","C/C++","Graph"]
 	},
 	{
-		"name": "Cool project 3",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "June 2014",
-		"tags": ["HTML","JQuery","PHP"]
+		"name": "Machine Learning: A Forum Post Sorting Algorithm",
+		"image": "piazza.jpg",
+		"url": "https://elevenychen.github.io/algorithms/2022/11/21/forum-post-sorting.html",
+		"date": "July 2020",
+		"tags": ["Machine Learning","C/C++"]
 	},
 	{
 		"name": "Cool project 4",
