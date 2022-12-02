@@ -17,7 +17,7 @@ For example:
 1. Fundations of objects
 2. Basic functions and algorithms
 3. Examples of effects
-4. Potential improvment
+4. Potential improvement
 <br>
 <br>
 <h3>1. Fundations of Objects</h3>
@@ -68,14 +68,23 @@ cost(row, column) = energy(row, column) + min(cost(row-1, column-1),
 <p> The seam array passed into this function contains the column numbers of the pixels that should be removed in each row, in order from the top to bottom rows. To remove the seam, copy the image one row at a time, first copying the part of the row before the seam (green), skipping that pixel, and then copying the rest (orange).</p>
 ![seam_demo](/static/projects/PPM-Adjustment/remove.png)
 <br>
-<h3>Examples of Effects</h3>
+<h3>3. Examples of Effects</h3>
 Small Example: dog
-![dog_ori](/static/projects/PPM-Adjustment/dog/dog.ppm)
-
-
-
-
-
+![dog](/static/projects/PPM-Adjustment/examples/1.png)
+<br>
+Small Example: crab
+![crab1](/static/projects/PPM-Adjustment/examples/2.png)
+![crab2](/static/projects/PPM-Adjustment/examples/3.png)
+<br>
+Medium Example: hourses
+![horse1](/static/projects/PPM-Adjustment/examples/4.png)
+![horse2](/static/projects/PPM-Adjustment/examples/5.png)
+<br>
+<h3>4. Potential Improvement</h3>
+<ul>
+<li>Generate the energy matrices through searching the original and roated images</li>
+<li>remove pixels based on relative energy</li>
+</ul>
 
 
 [video-link]:  https://www.youtube.com/watch?v=6NcIJXTlugc
