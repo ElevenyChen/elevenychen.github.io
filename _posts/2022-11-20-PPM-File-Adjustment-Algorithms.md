@@ -17,6 +17,7 @@ For example:
 1. Fundations of objects
 2. Basic functions and algorithms
 3. Examples of effects
+4. Potential improvment
 <br>
 <br>
 <h3>1. Fundations of Objects</h3>
@@ -70,6 +71,9 @@ cost(row, column) = energy(row, column) + min(cost(row-1, column-1),
 <br>
 <br>
 <h3>Examples of Effects</h3>
+Small Example: dog
+![dog_ori](/static/projects/PPM-Adjustment/dog/dog.ppm)
+
 
 
 
