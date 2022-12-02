@@ -19,18 +19,30 @@ For example:
 3. Examples of effects
 <br>
 <br>
-<h2>1. Fundations of Objects</h2>
-<h3>RGB Pixel</h3>
+<h3>1. Fundations of Objects</h3>
+<h4>RGB Pixel</h4>
 Each Pixel includes three integers, which represent red, green, and blue (RGB) color components. Each component takes on an intensity value between 0 and 255. The Pixel type is considered “Plain Old Data” (POD), which means it doesn’t have a separate object interface. Here is the Pixel struct and some examples:
 ![rgb_pixel_demo](/static/projects/PPM-Adjustment/rgb.png)
 <br>
-<h3>RGB Image</h3>
+<h4>RGB Image</h4>
 An RGB image here is considered a matrix of RGB pixel(s). A matrix is a two-dimensional grid (grid[row_num][column_num]). Below is a 5x5 image and its conceptual representation as a grid of pixels:
 ![rgb_grid_demo](/static/projects/PPM-Adjustment/rgb-image.png)
 <br>
-<h3>PPM Format File</h3>
+<h4>PPM Format File</h4>
 Here’s an example of an Image and its representation in PPM:
 ![ppm_demo](/static/projects/PPM-Adjustment/ppm file.png)
+<br>
+However, to process color information more efficiently, each color's channel is stored seperately
+The Image struct looks like this:
+{% highlight ruby %}
+struct Image {
+  int width;
+  int height;
+  Matrix red_channel;
+  Matrix green_channel;
+  Matrix blue_channel;
+};
+{% endhighlight %}
 <br>
 <br>
 
