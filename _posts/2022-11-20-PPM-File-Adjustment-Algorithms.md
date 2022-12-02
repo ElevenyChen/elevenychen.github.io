@@ -15,21 +15,26 @@ For example:
 <br>
 <h2>Table of Content</h2>
 1. Fundations of objects
-2. Basic functions
+2. Basic functions and algorithms
+3. Examples of effects
+<br>
+<br>
+<h2>1. Fundations of Objects</h2>
+<h3>RGB Pixel</h3>
+Each Pixel includes three integers, which represent red, green, and blue (RGB) color components. Each component takes on an intensity value between 0 and 255. The Pixel type is considered “Plain Old Data” (POD), which means it doesn’t have a separate object interface. Here is the Pixel struct and some examples:
+![rgb_pixel_demo](/static/projects/PPM-Adjustment/rgb.png)
+<br>
+<h3>RGB Image</h3>
+An RGB image here is considered a matrix of RGB pixel(s). A matrix is a two-dimensional grid (grid[row_num][column_num]). Below is a 5x5 image and its conceptual representation as a grid of pixels:
+![rgb_grid_demo](/static/projects/PPM-Adjustment/rgb-image.png)
+<br>
+<h3>PPM Format File</h3>
+Here’s an example of an Image and its representation in PPM:
+![ppm_demo](/static/projects/PPM-Adjustment/ppm file.png)
+<br>
+<br>
 
 
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
 
 [video-link]:  https://www.youtube.com/watch?v=6NcIJXTlugc
