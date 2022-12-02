@@ -44,14 +44,13 @@ struct Image {
 };
 {% endhighlight %}
 <br>
-<br>
 <h3>2. Basic Functions and Algorithms</h3>
-<h4>Read in and save</h4>
+<h4>(1) Read in and save</h4>
 Read in PPM Format files correctly, and create the corresponding dynamic objects.
 <br>
-<h4>Rotate and resize images</h4>
+<h4>(2) Rotate and resize images</h4>
 <br>
-<h4>Processing: The seam carving algorithm</h4>
+<h4>(3) Processing: The seam carving algorithm</h4>
 <p>The seam carving algorithm works by removing seams that pass through the "least important" pixels in an image. We use a pixel’s energy as a measure of its importance.</p>
 <p>To compute a pixel’s energy, we look at its neighbors. We’ll call them N (north), S (south), E (east), and W (west) based on their direction from the pixel in question (we’ll call it X).</p>
 ![energy-matrix_demo](/static/projects/PPM-Adjustment/energy_matrix.png)
@@ -68,7 +67,6 @@ cost(row, column) = energy(row, column) + min(cost(row-1, column-1),
 {% endhighlight %}
 <p> The seam array passed into this function contains the column numbers of the pixels that should be removed in each row, in order from the top to bottom rows. To remove the seam, copy the image one row at a time, first copying the part of the row before the seam (green), skipping that pixel, and then copying the rest (orange).</p>
 ![seam_demo](/static/projects/PPM-Adjustment/remove.png)
-<br>
 <br>
 <h3>Examples of Effects</h3>
 Small Example: dog
