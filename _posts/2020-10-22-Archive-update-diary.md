@@ -16,6 +16,8 @@ categories: others
 
 <p>2022-10-26 archive Machine Learning: Forum Post Sorting</p>
 
+<p>2022-12-05 archive the link to updating undergraduate senior thesis</p>
+
 <br />
 
 
