@@ -15,16 +15,16 @@ Piazza is a learning management system which allows students to ask questions in
 <h3>Piazza Dataset</h3>
 <p>Forum theme: EECS 280 (the second largest course at University of Michigan)</p>
 <p>Labels:</p>
-<p>By <strong>topic<strong/p>: "Project 1," "Project 2," "Project 3," "Project 4," "Project 5," "Midterm," "Final"</p>
-<p>By <strong>author<strong/p>: "Instructor," "Student"</p>
-<p><strong>Train<strong/p>: W14-W16, EECS280 Piazza Post, with proper labels</p>
-<p><strong>Validation<strong/p>: SP16, EECS280 Piazza Post</p>
-<p><strong>Test<strong/p>: W17, EECS280 Piazza Post</p>
+<p>By <strong>topic</strong>: "Project 1," "Project 2," "Project 3," "Project 4," "Project 5," "Midterm," "Final"</p>
+<p>By <strong>author</strong>: "Instructor," "Student"</p>
+<p><strong>Train</strong>: W14-W16, EECS280 Piazza Post, with proper labels</p>
+<p><strong>Validation</strong>: SP16, EECS280 Piazza Post</p>
+<p><strong>Test</strong>: W17, EECS280 Piazza Post</p>
 <p>(Post content was downloaded by crawlers)</p>
 <br>
 <h3>Model Construction</h3>
-<p><strong>Set<strong/p>: texts are considered unordered and non-repetitive</p>
-<p><strong>Conditional Probability<strong/p>: we write P(A) to denote the probability (between 0 and 1) that some event A will occur. We write P(A|B) to denote the probability that event A will occur given that we already know event B has occurred.</p>
+<p><strong>Set</strong>: texts are considered unordered and non-repetitive</p>
+<p><strong>Conditional Probability</strong>: we write P(A) to denote the probability (between 0 and 1) that some event A will occur. We write P(A|B) to denote the probability that event A will occur given that we already know event B has occurred.</p>
 <br>
 <br>
 <h3>Prediction Model</h3>
