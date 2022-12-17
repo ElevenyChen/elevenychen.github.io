@@ -8,11 +8,13 @@ categories: others
 
 <br />
 
-<p>2022-10-22 Initial commit</p>
+<p>2022-10-22 initial commit</p>
 
-<p>2022-10-23 Uploaded my resume</p>
+<p>2022-10-23 uploaded my resume</p>
 
 <p>2022-10-25 archive PPM File Adjustment Algorithms</p>
+
+<p>2022-10-26 archive Machine Learning: Forum Post Sorting</p>
 
 <br />
 
