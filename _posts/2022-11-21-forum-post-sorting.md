@@ -21,6 +21,7 @@ Piazza is a learning management system which allows students to ask questions in
 <p><strong>Validation</strong>: SP16, EECS280 Piazza Post</p>
 <p><strong>Test</strong>: W17, EECS280 Piazza Post</p>
 <p>(Post content was downloaded by crawlers)</p>
+<p>(Index categorization is based on binary search tree, the searching is based on map)</p>
 <br>
 <h3>Model Construction</h3>
 <p><strong>Set</strong>: texts are considered unordered and non-repetitive</p>
