@@ -7,11 +7,11 @@ categories: tools
 <br>
 <h1>Web Scraper + Text Analysis + Sentiment Analysis</h1>
 <h2>Web Scraper</h2>
-There are two primary sources of codes (both written in <strong>Python</strong>): [twitterscraper][twitterscraper] by Ahmet Taspinar and [zhihu_spider][zhihu_spider] by 
+There are two primary sources of codes (both written in <code>Python</code>): [twitterscraper][twitterscraper] by Ahmet Taspinar and [zhihu_spider][zhihu_spider] by 
 Liu Ruoyu. Codes can be downloaded from Github through the links.
 <br>
 <h2>Text Analysis</h2>
-Code in this part is written in <strong>R</strong>.
+Code in this part is written in <code>R</code>.
 <h3>Build Corpus</h3>
 {% highlight ruby %}
 install.packages("tm")
@@ -60,7 +60,7 @@ subofeach
 {% endhighlight %}
 
 <h3>Generate a Wordcloud</h3>
-R packages:
+<code>R</code> packages:
 {% highlight ruby %}
 install.packages(wordcloud)
 install.packages(RColorBrewer)
@@ -77,19 +77,19 @@ wordcloud (words=names(subofeach),
            colors=brewer.pal(8, "Dark2"))
 {% endhighlight %}
 The other way of making a word cloud is using the code [chartjs-chart-wordcloud][chartjs-chart-wordcloud] by Samuel Gratzl. The code is written in Typescript and Javascript.
-![word] (/static/projects/WordCloud/wordcloud.png)
+![word](/static/projects/WordCloud/wordcloud.png)
 
 <br>
 <h2>Sentiment Analysis</h2>
 <p>Sentiment analysis is the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information.</p>
-In R, we can use package <code>syuzhet</code>:
+In <code>R</code>, we can use package <code>syuzhet</code>:
 {% highlight ruby %}
 install.packages(syuzhet)
 library(syuzhet)
 scores <- get_nrc_sentiment(Slotkinonly)
 head (scores)
 {% endhighlight %}
-However, there is a good package in Python aviliable on Github. The package is called [pattern][pattern], from Computational Linguistics Research Group.
+However, there is a good package in <code>Python</code> aviliable on Github. The package is called [pattern][pattern], from Computational Linguistics Research Group.
 <br>
 
 [twitterscraper]: https://github.com/taspinar/twitterscraper
