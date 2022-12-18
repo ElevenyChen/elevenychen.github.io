@@ -85,6 +85,7 @@ Medium Example: hourses
 <li>Generate the energy matrices through searching the original and roated images</li>
 <li>remove pixels based on relative energy</li>
 </ul>
+<br>
 
 
 [video-link]:  https://www.youtube.com/watch?v=6NcIJXTlugc
