@@ -18,13 +18,16 @@ A relational database is the most common means of data storage and retrieval in 
 <pre><code>[Corvette, Corvette, Malibu, Malibu, Malibu]
 </code></pre>
 <br>
-<h3>CREATE</h4>
+<h2>Darabase Commands</h2>
+<p>These commands affect the structure of the database and the running of the command shell. They include the creation and removal of tables, but do not deal with any actual data (items of type <code>string</code>, <code>double</code>, <code>int</code> or <code>bool</code>).
+</p>
+<h3>CREATE</h3>
 <p>Add a new table to the database:</p>
-<h5>CREATE Syntax</h5>
+<h4>CREATE Syntax</h4>
 <pre><code>CREATE <tablename> <N> <coltype1> <coltype2> ... <coltypeN> <colname1> <colname2> ... <colnameN>
 </code></pre>
 <p>Creates a new table with N columns (where N > 0). Each column contains data of type <code><coltype></code> and is accessed with the name <code><coltype></code>. Table names and column names should be guaranteed to be space-free. No two columns in the same table can have the same name (you do not need to check). Valid data types for coltype are <code>{double, int, bool, string}</code>. This table is initially empty.</p>
-<h5>CREATE Output</h5>
+<h4>CREATE Output</h4>
 <p>Print the following on a single line followed by a newline:</p>
 <pre><code>New table <tablename> with column(s) <colname1> <colname2> ... <colnameN> created
 </code></pre>
