@@ -15,4 +15,4 @@ Hello! My name is Eleveny (Shiyi) Chen. I am a undergraduate senior student at [
 [Computer Science]: https://cse.engin.umich.edu/
 [Quantitative Methods in Social Science]: https://lsa.umich.edu/qmss
 [here]: https://drive.google.com/file/d/12aUJtOeb1lmS9qqtc5eAoE7EXUqj_8Fv/view?usp=sharing
-[this website]: (https://elevenychen.github.io/others/2022/12/06/undergrad-thesis.html)
+[this website]: https://elevenychen.github.io/others/2022/12/06/undergrad-thesis.html
