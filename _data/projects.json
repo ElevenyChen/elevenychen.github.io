@@ -19,6 +19,14 @@
 		"url": "https://elevenychen.github.io/database/2022/11/21/database-query-language.html",
 		"date": "November 2022",
 		"tags": ["Database","C/C++"]
+	},
+		{
+		"name": "Web Scraper/Text/Sentiment Analysis",
+		"image": "wordcloud.png",
+		"url": "https://elevenychen.github.io/tools/2022/12/17/web-scraper-word-cloud.html",
+		"date": "December 2022",
+		"tags": ["Text Analysis","R"]
 	}
+
 
 ]
