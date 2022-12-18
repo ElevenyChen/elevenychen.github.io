@@ -61,7 +61,7 @@ Table <tablename> deleted
 
 <br>
 <h2>Table Commands</h2>
-<p>TThese commands work on one or more tables and are responsible for interacting with actual data, including insertion, deletion, printing, and indexing.</p>
+<p>These commands work on one or more tables and are responsible for interacting with actual data, including insertion, deletion, printing, and indexing.</p>
 <h3>INSERT</h3>
 <p>Insert new rows at the end (append) of the specified table.</p>
 <h4>INSERT Syntax</h4>
@@ -77,6 +77,28 @@ INSERT INTO <tablename> <N> ROWS
 <p>Print the message shown below, followed by a newline, where <code>N</code> is the number of rows inserted, <code>[startN]</code> is the index of the first row added in the table, and <code>[endN]</code> is the index of the last row added to the table, 0 based. So, if there were <code>K</code> rows in the table prior to insertion, <code>[startN] = K</code>, and <code>[endN] = K + N - 1</code>.</p>
 {% highlight ruby %}
 Added <N> rows to <tablename> from position <startN> to <endN>
+{% endhighlight %}
+
+<br>
+<h3>DELETE</h3>
+<p>Delete selected rows from the specified table.</p>
+<h4>DELETE Syntax</h4>
+{% highlight ruby %}
+DELETE FROM <tablename> WHERE <colname> <OP> <value>
+{% endhighlight %}
+<p>Deletes all rows from the table specified by <code>[tablename]</code> where the value of the entry in <code>[colname]</code> satisfies the operation <code>[OP]</code> with the given value <code>[value]</code>. You can assume that <code>[value]</code> will always be of the same type as <code>[colname]</code>. For example, to delete all rows from table1 where the entries in column name equal John, the command would be:</p>
+{% highlight ruby %}
+DELETE FROM table1 WHERE name = John
+{% endhighlight %}
+<p>Or, to delete all rows from <code>tableSmall</code> where the entries in column size are greater than <code>15</code>, the command would be:</p>
+{% highlight ruby %}
+DELETE FROM tableSmall WHERE size > 15
+{% endhighlight %}
+<p><code>[OP]</code> can be from the set <code>{<, >, =}</code>.</p>
+<h4>DELETE Output</h4>
+<p>Print a summary of the number of rows deleted from the table as shown below, followed by a newline:</p>
+{% highlight ruby %}
+Deleted <N> rows from <tablename>
 {% endhighlight %}
 
 <br>
