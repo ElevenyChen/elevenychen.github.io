@@ -80,6 +80,29 @@ Added <N> rows to <tablename> from position <startN> to <endN>
 {% endhighlight %}
 
 <br>
+<h3>PRINT</h3>
+<p>Print values from selected columns, in the given order, from specified rows.</p>
+<h4>PRINT Syntax</h4>
+{% highlight ruby %}
+PRINT FROM <tablename> <N> <print_colname1> <print_colname2> ... <print_colnameN> {WHERE <colname> <OP> <value> | ALL}
+{% endhighlight %}
+<p>Directs the program to print the columns specified by <code>[print_colname1]</code>, <code>[print_colname2]</code>, … <code>[print_colnameN]</code> from some/all rows in <code>[tablename]</code>. If there is no condition, the command is of the form <code>PRINT ... ALL</code>, and the matching columns from all rows of the table are printed strictly in insertion order. If there is a condition, the command is of the form <code>PRINT ... WHERE <colname> <OP> <value></code>, and only rows whose values in the selected <code>[colname]</code> pass the condition are printed. The rules for the conditional portion are the same as for the DELETE command. The number and order of the column names given in the command do not have to match the number or order of columns in the specified table.</p>
+<p>If no index exists or there is a <code>hash</code> index on the conditional column, the results should be printed in order of insertion into the table.</p>
+<p>If a bst index exists on the conditional column, the results should be printed in the order in the BST (least item to greatest item for <code>std::map</code> constructed with the default <code>std::less</code> operator), with ties broken by order of insertion into the table.</p>
+<h4>PRINT Output</h4>
+<p>Print the requested data followed by a summary. Printing the data is accomplished by printing a single line with the names of the selected columns, followed by a single line from each specified row, where the values of each of the selected columns are separated by a single space. Every line should be followed by a newline.</p>
+{% highlight ruby %}
+<print_colname2> ... <print_colnameN>
+<value2row1> ... <valueNrow1>
+...
+<value2rowM> ... <valueNrowM>
+{% endhighlight %}
+<p>To print the summary, on a single line, print the number of rows <code>M</code> printed, and the <code>[tablename]</code> from which the rows were printed, followed by a newline.</p>
+{% highlight ruby %}
+Printed <M> matching rows from <tablename>
+{% endhighlight %}
+
+<br>
 <h3>DELETE</h3>
 <p>Delete selected rows from the specified table.</p>
 <h4>DELETE Syntax</h4>
@@ -102,4 +125,22 @@ Deleted <N> rows from <tablename>
 {% endhighlight %}
 
 <br>
-
+<h3>JOIN</h3>
+<p>Join two tables where values in selected columns match, and print results.</p>
+<h4>JOIN Syntax</h4>
+{% highlight ruby %}
+JOIN <tablename1> AND <tablename2> WHERE <colname1> = <colname2> AND PRINT <N> <print_colname1> <1|2> <print_colname2> <1|2> ... <print_colnameN> <1|2>
+{% endhighlight %}
+<p>Directs the program to print the data in <code>N</code> columns, selected by <code>[print_colname1]</code>, <code>[print_colname2]</code>, … <code>[print_colnameN]</code>. The <code>[print_colname]</code>s will be the names of columns in either the first table <code>[tablename1]</code> or the second table <code>[tablename2]</code>, as chosen by the <code>1/2</code> argument directly following each </code>[print_colname]</code>.</p>
+<h4>JOIN Output</h4>
+<p>Print the requested data followed by a summary. Printing the data is accomplished by printing a single line with the names of the selected columns, followed by a single line from each joined row, where the values of each of the selected columns are separated by a single space. Every line should be followed by a newline.<p>
+{% highlight ruby %}
+<print_colname1> <print_colname2> ... <print_colnameN>
+<value1rowA> <value2rowA> ... <valueNrowA>
+...
+<value1rowM> <value2rowM> ... <valueNrowM>
+{% endhighlight %}
+<p>To print the summary, on a single line, print the number of rows <code>N</code> printed, and both <code>[tablename1]</code> and <code>[tablename2]</code> which were joined, followed by a newline.<p>
+{% highlight ruby %}
+Printed <N> rows from joining <tablename1> to <tablename2>
+{% endhighlight %}
