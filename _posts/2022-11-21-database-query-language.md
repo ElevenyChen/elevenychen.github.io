@@ -144,3 +144,13 @@ JOIN <tablename1> AND <tablename2> WHERE <colname1> = <colname2> AND PRINT <N> <
 {% highlight ruby %}
 Printed <N> rows from joining <tablename1> to <tablename2>
 {% endhighlight %}
+
+<br>
+<h3>GENERATE</h3>
+<p>Create a search index on the selected column in the specified table.</p>
+<h4>GENERATE Syntax</h4>
+{% highlight ruby %}
+GENERATE FOR <tablename> <indextype> INDEX ON <colname>
+{% endhighlight %}
+<p>Directs the program to create an index of the type <code>[indextype]</code> on the column <code>[colname]</code> in the table <code>[tablename]</code>, where <code>[indextype]</code> is limited to the set <code>{hash, bst}</code>, denoting a hash table index and a binary search tree index respectively. Given the <code>[indextype]</code> hash on column <code>[colname]</code>, the program should create a hash table that allows a row in the table to be found rapidly given a particular value in the column <code>[colnam]</code>. Given the <code>[indextype]</code> bst on column <code>[colname]</code>, the program should create a binary search tree that allows rows in the table to be found rapidly given a particular value in the column <code>[colname]</code>. Only one user-generated Index may exist per table, at any one time. If a valid index is requested on a table that already has one, discard the old index before building the new one.</p>
+<p>When <code>bst</code> is the specified index type, a <code>std::map</code> should be applied; when <code>hash</code> is the specified index type, a <code>std::unordered_map</code> should be utilized. It is acceptable for both types to exist at the same time, but only one should be in use or contain data at any given time.</p>
