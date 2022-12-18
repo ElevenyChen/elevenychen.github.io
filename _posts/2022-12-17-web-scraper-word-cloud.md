@@ -76,7 +76,7 @@ wordcloud (words=names(subofeach),
            max.words=30,
            colors=brewer.pal(8, "Dark2"))
 {% endhighlight %}
-The other way of making a word cloud is using the code [chartjs-chart-wordcloud][chartjs-chart-wordcloud] by Samuel Gratzl. The code is written in Typescript and Javascript.
+The other way of making a word cloud is using the code [chartjs-chart-wordcloud][chartjs-chart-wordcloud] by Samuel Gratzl. The code is written in <code>Typescript</code> and <code>Javascript</code>.
 ![word](/static/projects/WordCloud/wordcloud.png)
 
 <br>
