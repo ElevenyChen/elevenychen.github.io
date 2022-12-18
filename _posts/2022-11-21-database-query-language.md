@@ -32,4 +32,14 @@ CREATE <tablename> <N> <coltype1> <coltype2> ... <coltypeN> <colname1> <colname2
 {% highlight ruby %}
 New table <tablename> with column(s) <colname1> <colname2> ... <colnameN> created
 {% endhighlight %}
+<h3>QUIT</h3>
+<p>Exit the program and delete all data in the database.</p>
+<h4>QUIT Syntax</h4>
+<pre><code>QUIT
+</code></pre>
+<p>Cleans up all internal data (i.e. no memory leaks) and exits the program. Note that the program must exit with a <code>return 0</code> from <code>main()</code>.</p>
+<h4>QUIT Output</h4>
+<p>Print a goodbye message, followed by a newline.</p>
+<pre><code>Thanks for being silly!
+</code></pre>
 
