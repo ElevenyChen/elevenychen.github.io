@@ -26,7 +26,7 @@ A relational database is the most common means of data storage and retrieval in 
 {% highlight ruby %}
 CREATE <tablename> <N> <coltype1> <coltype2> ... <coltypeN> <colname1> <colname2> ... <colnameN>
 {% endhighlight %}
-<p>Creates a new table with N columns (where N > 0). Each column contains data of type <code><coltype></code> and is accessed with the name <code><coltype></code>. Table names and column names should be guaranteed to be space-free. No two columns in the same table can have the same name (you do not need to check). Valid data types for coltype are <code>{double, int, bool, string}</code>. This table is initially empty.</p>
+<p>Creates a new table with N columns (where N > 0). Each column contains data of type <code>[coltype]</code> and is accessed with the name <code>[coltype]</code>. Table names and column names should be guaranteed to be space-free. No two columns in the same table can have the same name (you do not need to check). Valid data types for coltype are <code>{double, int, bool, string}</code>. This table is initially empty.</p>
 <h4>CREATE Output</h4>
 <p>Print the following on a single line followed by a newline:</p>
 {% highlight ruby %}
