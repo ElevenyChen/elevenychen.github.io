@@ -23,7 +23,7 @@ A relational database is the most common means of data storage and retrieval in 
 <h3>CREATE</h3>
 <p>Add a new table to the database:</p>
 <h4>CREATE Syntax</h4>
-<pre><code>CREATE <tablename> <N> <coltype1> <coltype2> ... <coltypeN> <colname1> <colname2> ... <colnameN>
+<pre><code>`CREATE <tablename> <N> <coltype1> <coltype2> ... <coltypeN> <colname1> <colname2> ... <colnameN>`
 </code></pre>
 <!-- <pre><code>CREATE <tablename> <N> <coltype1> <coltype2> ... <coltypeN> <colname1> <colname2> ... <colnameN>
 </code></pre>
