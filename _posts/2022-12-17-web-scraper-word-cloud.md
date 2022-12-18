@@ -1,25 +1,98 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-06-04 13:50:39
-categories: jekyll
+title:  "Web Scraper + Text Analysis + Sentiment Analysis"
+date:   2022-12-17 23:50:39
+categories: tools
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
+<br>
+<h1>Web Scraper + Text Analysis + Sentiment Analysis</h1>
+<h2>Web Scraper</h2>
+There are two primary sources of codes (both written in <strong>Python</strong>): [twitterscraper][twitterscraper] by Ahmet Taspinar and [zhihu_spider][zhihu_spider] by 
+Liu Ruoyu. Codes can be downloaded from Github through the links.
+<br>
+<h2>Text Analysis</h2>
+Code in this part is written in <strong>R</strong>.
+<h3>Build Corpus</h3>
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+install.packages("tm")
+install.packages("SnowballC")
+library("tm")
+library("SnowballC")
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+<h4>Clean The Corpus</h4>
+Several things need to be done before we can run the analysis:
+<ul>
+<li>Convert all text to lower case</li>
+<li>Removes Punctuation</li>
+<li>Removes common english words</li>
+<li>Transforms to root words</li>
+<li>Takes out https (since these are tweets there are a bunch of https)</li>
+<li>Takes out spaces left by removing previous misc.</li>
+</ul>
+Using Tweets as an example example, the code should look like:
+{% highlight ruby %}
+TweetCorpus <- TweetCorpus %>%
+  tm_map(removeNumbers) %>%
+  tm_map(removePunctuation) %>%
+  tm_map(stripWhitespace)
+TweetCorpus <- tm_map(TweetCorpus, content_transformer(tolower))
+TweetCorpus <- tm_map(TweetCorpus, removeWords, stopwords("english"))
+TweetCorpus <- tm_map(TweetCorpus, stemDocument) 
+removeURL <- function (x) gsub('http[[:alnum:]]*','', x)
+TweetCorpus <- tm_map(TweetCorpus, content_transformer(removeURL))
+TweetCorpus <- tm_map (TweetCorpus, stripWhitespace)
+inspect (TweetCorpus[1:5])
+{% endhighlight %}
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+<h4>Make Term Document Matrix</h4>
+{% highlight ruby %}
+Tweetdm <- TermDocumentMatrix(TweetCorpus)
+Tweetdm <- as.matrix(Tweetdm)
+Tweetdm[1:10, 1:20]
+{% endhighlight %}
+See freq of words, then exclude to only words showing more than <code>7</code> times
+{% highlight ruby %}
+eachword <- rowSums(Tweetdm)
+eachword
+subofeach <-subset(eachword, eachword>=5)
+subofeach
+{% endhighlight %}
+
+<h3>Generate a Wordcloud</h3>
+R packages:
+{% highlight ruby %}
+install.packages(wordcloud)
+install.packages(RColorBrewer)
+library(RColorBrewer)
+library(wordcloud)
+{% endhighlight %}
+<br>
+{% highlight ruby %}
+TweetCloud <- sort(rowSums(Tweetdm), decreasing=TRUE)
+set.seed (123)
+wordcloud (words=names(subofeach),
+           freq=subofeach,
+           max.words=30,
+           colors=brewer.pal(8, "Dark2"))
+{% endhighlight %}
+The other way of making a word cloud is using the code [chartjs-chart-wordcloud][chartjs-chart-wordcloud] by Samuel Gratzl. The code is written in Typescript and Javascript.
+![word] (/static/projects/WordCloud/wordcloud.png)
+
+<br>
+<h2>Sentiment Analysis</h2>
+<p>Sentiment analysis is the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information.</p>
+In R, we can use package <code>syuzhet</code>:
+{% highlight ruby %}
+install.packages(syuzhet)
+library(syuzhet)
+scores <- get_nrc_sentiment(Slotkinonly)
+head (scores)
+{% endhighlight %}
+However, there is a good package in Python aviliable on Github. The package is called [pattern][pattern], from Computational Linguistics Research Group.
+<br>
+
+[twitterscraper]: https://github.com/taspinar/twitterscraper
+[zhihu_spider]: https://github.com/LiuRoy/zhihu_spider
+[chartjs-chart-wordcloud]: https://github.com/sgratzl/chartjs-chart-wordcloud
+[pattern]: https://github.com/clips/pattern
