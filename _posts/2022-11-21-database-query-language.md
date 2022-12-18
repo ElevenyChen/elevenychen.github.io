@@ -58,6 +58,26 @@ REMOVE <tablename>
 {% highlight ruby %}
 Table <tablename> deleted
 {% endhighlight %}
-<br>
 
+<br>
+<h2>Table Commands</h2>
+<p>TThese commands work on one or more tables and are responsible for interacting with actual data, including insertion, deletion, printing, and indexing.</p>
+<h3>INSERT</h3>
+<p>Insert new rows at the end (append) of the specified table.</p>
+<h4>INSERT Syntax</h4>
+{% highlight ruby %}
+INSERT INTO <tablename> <N> ROWS 
+<value11> <value12> ... <value1M> 
+<value21> <value22> ... <value2M> 
+... 
+<valueN1> <valueN2> ... <valueNM>
+{% endhighlight %}
+<p>Inserts <code>N</code> new rows into the table specified by tablename. The first line of the command specifies the tablename and the number of rows, <code>N > 0</code>, to be inserted. The next <code>N</code> lines specify the values to be inserted into the table. Each line contains <code>M</code> values, where <code>M</code> is guaranteed to be equal to the number of columns in the table. The first value, <code>[value11]</code>, should be inserted into the first column of the table in the first inserted row, the second value, <code>[value12]</code>, into the second column of the table in the first inserted row, and so on. Additionally, the types of the values are guaranteed to be the same as the types of the columns they are inserted into. For example, if the second column of the table contains integers, <code>[value12]</code> is guaranteed to be an <code>int</code>. Further, <code>string</code> items are guaranteed to be a single string of whitespace delimited characters (i.e. <code>foo bar</code> is invalid, but <code>foo_bar</code> is acceptable).</p>
+<h4>INSERT Output</h4>
+<p>Print the message shown below, followed by a newline, where <code>N</code> is the number of rows inserted, <code>[startN]</code> is the index of the first row added in the table, and <code>[endN]</code> is the index of the last row added to the table, 0 based. So, if there were <code>K</code> rows in the table prior to insertion, <code>[startN] = K</code>, and <code>[endN] = K + N - 1</code>.</p>
+{% highlight ruby %}
+Added <N> rows to <tablename> from position <startN> to <endN>
+{% endhighlight %}
+
+<br>
 
