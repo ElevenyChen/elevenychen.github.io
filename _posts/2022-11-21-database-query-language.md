@@ -32,6 +32,8 @@ CREATE <tablename> <N> <coltype1> <coltype2> ... <coltypeN> <colname1> <colname2
 {% highlight ruby %}
 New table <tablename> with column(s) <colname1> <colname2> ... <colnameN> created
 {% endhighlight %}
+
+<br>
 <h3>QUIT</h3>
 <p>Exit the program and delete all data in the database.</p>
 <h4>QUIT Syntax</h4>
@@ -42,4 +44,20 @@ New table <tablename> with column(s) <colname1> <colname2> ... <colnameN> create
 <p>Print a goodbye message, followed by a newline.</p>
 <pre><code>Thanks for being Simple!
 </code></pre>
+
+<br>
+<h3>REMOVE</h3>
+<p>Remove existing table from the database, deleting all data in the table and its definition.</p>
+<h4>REMOVE Syntax</h4>
+{% highlight ruby %}
+REMOVE <tablename>
+{% endhighlight %}
+<p>Removes the table specified by <code>[tablename]</code> and all associated data from the database, including any created index.</p>
+<h4>REMOVE Output</h4>
+<p>Print a confirmation of table deletion, followed by a newline, as follows:</p>
+{% highlight ruby %}
+Table <tablename> deleted
+{% endhighlight %}
+<br>
+
 
