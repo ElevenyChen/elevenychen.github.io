@@ -19,11 +19,11 @@ install.packages("SnowballC")
 library("tm")
 library("SnowballC")
 {% endhighlight %}
-
+<br>
 <h4>Clean The Corpus</h4>
 Several things need to be done before we can run the analysis:
 <ul>
-<li>Convert all text to lower case</li>
+<li>Converts all text to lower case</li>
 <li>Removes Punctuation</li>
 <li>Removes common english words</li>
 <li>Transforms to root words</li>
@@ -45,6 +45,7 @@ TweetCorpus <- tm_map (TweetCorpus, stripWhitespace)
 inspect (TweetCorpus[1:5])
 {% endhighlight %}
 
+<br>
 <h4>Make Term Document Matrix</h4>
 {% highlight ruby %}
 Tweetdm <- TermDocumentMatrix(TweetCorpus)
@@ -59,6 +60,7 @@ subofeach <-subset(eachword, eachword>=5)
 subofeach
 {% endhighlight %}
 
+<br>
 <h3>Generate a Wordcloud</h3>
 <code>R</code> packages:
 {% highlight ruby %}
