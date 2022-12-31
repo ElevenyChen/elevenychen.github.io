@@ -58,7 +58,11 @@ eachword <- rowSums(Tweetdm)
 eachword
 subofeach <-subset(eachword, eachword>=5)
 subofeach
+#barplot with words typed vertically
+barplot (subofeach, las=2)
 {% endhighlight %}
+
+
 
 <br>
 <h3>Generate a Wordcloud</h3>
@@ -78,6 +82,7 @@ wordcloud (words=names(subofeach),
            max.words=30,
            colors=brewer.pal(8, "Dark2"))
 {% endhighlight %}
+![barplot](/static/projects/WordCloud/barplot.png)
 The other way of making a word cloud is using the code [chartjs-chart-wordcloud][chartjs-chart-wordcloud] by Samuel Gratzl. The code is written in <code>Typescript</code> and <code>Javascript</code>.
 ![word](/static/projects/WordCloud/wordcloud.png)
 
@@ -90,7 +95,19 @@ install.packages(syuzhet)
 library(syuzhet)
 scores <- get_nrc_sentiment(Slotkinonly)
 head (scores)
+
+Slotkinonly[4]
+get_nrc_sentiment('thank')
+get_nrc_sentiment('president')
+
+# using original tweets, run the sentiment analysis and plot it on a bar chart.
+barplot (colSums(scores),
+         las=2,
+         col=rainbow(10),
+         ylab="counts",
+         main="Sentiment Score for Paul Junge Tweets")
 {% endhighlight %}
+![sentimental](/static/projects/WordCloud/sentimental.png)
 However, there is a good package in <code>Python</code> aviliable on Github. The package is called [pattern][pattern], from Computational Linguistics Research Group.
 <br>
 
