@@ -108,6 +108,7 @@ barplot (colSums(scores),
          main="Sentiment Score for Paul Junge Tweets")
 {% endhighlight %}
 ![sentimental](/static/projects/WordCloud/sentimental.png)
+<br>
 However, there is a good package in <code>Python</code> aviliable on Github. The package is called [pattern][pattern], from Computational Linguistics Research Group.
 <br>
 
